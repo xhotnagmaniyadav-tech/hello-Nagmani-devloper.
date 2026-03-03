@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nagmani Yadav | Ultra Pro Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+/* Animated Gradient Background */
+body{
+background:linear-gradient(-45deg,#00f5ff,#ff00c8,#ffae00,#00ff88);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+color:white;
+overflow-x:hidden;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Scroll Progress */
+#progress{
+position:fixed;
+top:0;
+left:0;
+height:5px;
+background:cyan;
+width:0%;
+z-index:2000;
+}
+
+/* Navbar */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(15px);
+padding:15px;
+text-align:center;
+font-weight:bold;
+z-index:1000;
+}
+
+/* Hero Section */
+.hero{
+padding-top:120px;
+text-align:center;
+padding-bottom:70px;
+}
+
+.hero h1{
+font-size:38px;
+font-weight:800;
+text-shadow:0 0 25px cyan;
+}
+
+#typing{
+display:block;
+font-size:22px;
+margin-top:10px;
+color:yellow;
+}
+
+.hero button{
+margin-top:25px;
+padding:14px 35px;
+border:none;
+border-radius:30px;
+background:linear-gradient(45deg,#ff00cc,#3333ff);
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 0 25px #ff00cc;
+}
+
+.hero button:hover{
+transform:scale(1.1);
+box-shadow:0 0 50px cyan;
+}
+
+/* Section */
+.section{
+padding:60px 20px;
+text-align:center;
+}
+
+/* Glass Card */
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(20px);
+border-radius:25px;
+padding:30px;
+margin:20px auto;
+width:90%;
+max-width:500px;
+box-shadow:0 0 30px rgba(0,0,0,0.4);
+transition:0.6s;
+opacity:0;
+transform:translateY(60px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 50px cyan;
+}
+
+/* Skills */
+.skill{
+text-align:left;
+margin:15px 0;
+}
+
+.bar{
+background:#222;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:10px;
+width:0;
+background:linear-gradient(90deg,#00ffff,#ff00ff);
+transition:2s;
+}
+
+/* Buttons */
+.project-btn{
+margin-top:15px;
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:cyan;
+color:black;
+cursor:pointer;
+transition:0.4s;
+}
+
+.project-btn:hover{
+background:black;
+color:cyan;
+box-shadow:0 0 20px cyan;
+}
+
+/* Floating Buttons */
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+}
+
+.float a{
+margin:6px;
+padding:15px;
+border-radius:50%;
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.4s;
+}
+
+.float a:hover{
+transform:scale(1.2);
+}
+
+.whatsapp{background:#25D366;}
+.gmail{background:#ea4335;}
+
+/* Footer */
+footer{
+padding:25px;
+text-align:center;
+background:rgba(0,0,0,0.3);
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="progress"></div>
+
+<nav>🚀 Welcome to Nagmani - Web Developer</nav>
+
+<section class="hero">
+<h1>Hi, I'm Nagmani Yadav</h1>
+<span id="typing"></span>
+<button onclick="alert('Add your CV link here')">Download CV</button>
+</section>
+
+<section class="section">
+
+<div class="card">
+<h2>About Me</h2>
+<p>🎓 12th Pass | ADCA+ Completed</p>
+<p>💻 Professional Web Developer</p>
+<p>📧 xhotnagmaniyadav@gmail.com</p>
+<p>📱 9204909834</p>
+</div>
+
+<div class="card">
+<h2>My Skills</h2>
+
+<div class="skill">HTML<div class="bar"><div class="fill" data-width="95%"></div></div></div>
+<div class="skill">CSS<div class="bar"><div class="fill" data-width="90%"></div></div></div>
+<div class="skill">JavaScript<div class="bar"><div class="fill" data-width="80%"></div></div></div>
+<div class="skill">Tally ERP 9<div class="bar"><div class="fill" data-width="85%"></div></div></div>
+<div class="skill">MS Office<div class="bar"><div class="fill" data-width="92%"></div></div></div>
+
+</div>
+
+<div class="card">
+<h2>Projects</h2>
+<p>Advanced Portfolio Website</p>
+<button class="project-btn">Live Demo</button>
+</div>
+
+</section>
+
+<div class="float">
+<a href="https://wa.me/919204909834" class="whatsapp">W</a>
+<a href="mailto:xhotnagmaniyadav@gmail.com" class="gmail">G</a>
+</div>
+
+<footer>
+© 2026 Nagmani Yadav | All Rights Reserved
+</footer>
+
+<script>
+
+/* Scroll Progress */
+window.onscroll=function(){
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(winScroll/height)*100;
+document.getElementById("progress").style.width=scrolled+"%";
+};
+
+/* Typing Effect */
+let text=["Web Developer","Frontend Designer","ADCA+ Certified","HTML CSS JS Expert"];
+let count=0,index=0,currentText="",letter="";
+
+(function type(){
+if(count===text.length){count=0;}
+currentText=text[count];
+letter=currentText.slice(0,++index);
+document.getElementById("typing").textContent=letter;
+if(letter.length===currentText.length){
+count++;index=0;
+setTimeout(type,1000);
+}else{
+setTimeout(type,100);
+}
+})();
+
+/* Scroll Reveal */
+const cards=document.querySelectorAll(".card");
+window.addEventListener("scroll",()=>{
+cards.forEach(card=>{
+let position=card.getBoundingClientRect().top;
+if(position<window.innerHeight-100){
+card.classList.add("show");
+}
+});
+});
+
+/* Skill Animation */
+window.addEventListener("load",()=>{
+document.querySelectorAll(".fill").forEach(bar=>{
+bar.style.width=bar.getAttribute("data-width");
+});
+});
+
+</script>
+
+</body>
+</html>
